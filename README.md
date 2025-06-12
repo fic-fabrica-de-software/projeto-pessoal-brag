@@ -1,2 +1,1 @@
-# projeto-pessoal-brag
-projeto-pessoal-brag created by GitHub Classroom
+Nossa equipe percebeu que existe uma séria falta de acessibilidade na programação e desenvolvimento de softwares para pessoas que não possuem um computador pessoal, assim surgiu a ideia de criar uma IDE para celular, impulsionada pela avanço do poder de processamento dos smartfones modernos, pela popularização dos tablets no ambiente acadêmico e pelas técnologias de esplhamento de tela que existem no mercado atual em celulares de linhas mais caras de empresas como samsung e motorola.
