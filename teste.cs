@@ -2,4 +2,9 @@ int teste = 34;
 
 console.writeLine(teste);
 
-nova linha
+//nova linha
+
+public class{
+		
+}
+
