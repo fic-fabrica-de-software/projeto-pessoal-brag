@@ -1,10 +1,11 @@
-int teste = 34;
+using System;
 
-console.writeLine(teste);
-
-//nova linha
-
-public class{
-		
+class Program
+{
+    static void Main()
+    {
+        int teste = 34;
+        Console.WriteLine(teste);
+    }
 }
 
