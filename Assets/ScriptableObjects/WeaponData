@@ -1,0 +1,33 @@
+TopDownShooterGame
+├── Assets
+│   ├── Scripts
+│   │   ├── Core
+│   │   │   ├── GameManager.cs
+│   │   │   └── ObjectPool.cs
+│   │   ├── Player
+│   │   │   ├── PlayerController.cs
+│   │   │   ├── PlayerHealth.cs
+│   │   │   └── PlayerShooting.cs
+│   │   ├── Enemy
+│   │   │   ├── EnemyAI.cs
+│   │   │   ├── EnemyHealth.cs
+│   │   │   └── EnemySpawner.cs
+│   │   ├── Weapons
+│   │   │   ├── Projectile.cs
+│   │   │   ├── Weapon.cs
+│   │   │   └── WeaponData.cs
+│   │   ├── UI
+│   │   │   ├── HealthUI.cs
+│   │   │   └── HUDManager.cs
+│   │   └── Utils
+│   │       └── Extensions.cs
+│   ├── Prefabs
+│   │   ├── Player.prefab
+│   │   ├── Enemy.prefab
+│   │   └── Projectile.prefab
+│   ├── Scenes
+│   │   └── MainGame.unity
+│   └── ScriptableObjects
+│       └── WeaponData
+├── ProjectSettings
+└── README.md
