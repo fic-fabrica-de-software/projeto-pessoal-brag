@@ -1,32 +1,42 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    [Header("Player Movement Settings")]
-    [SerializeField] private float moveSpeed = 5f; // Velocidade de movimento do jogador
-
+    public float speed = 5f;
     private Rigidbody2D rb;
-    private Vector2 movement;
+    private Animator animator;
 
-    private void Start()
+    void Start()
     {
-        // Obtém o Rigidbody2D do jogador
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    void Update()
     {
-        // Captura a entrada do teclado (WASD ou setas)
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
 
-        // Normaliza o vetor de movimento para evitar movimento mais rápido na diagonal
-        movement = movement.normalized;
-    }
+        Vector2 movement = new Vector2(moveX, moveY);
 
-    private void FixedUpdate()
-    {
-        // Move o jogador usando o Rigidbody2D
-        rb.velocity = movement * moveSpeed;
+        rb.velocity = movement.normalized * speed;
+
+        animator.SetFloat("Speed", movement.magnitude);
+        
+        // Define direção (opcional: use um parâmetro "Direction")
+        if (moveX != 0 || moveY != 0)
+        {
+            // Ex: salva última direção para escolher animação certa
+            if (Mathf.Abs(moveX) > Mathf.Abs(moveY))
+            {
+                animator.SetFloat("MoveX", moveX);
+                animator.SetFloat("MoveY", 0);
+            }
+            else
+            {
+                animator.SetFloat("MoveY", moveY);
+                animator.SetFloat("MoveX", 0);
+            }
+        }
     }
 }
