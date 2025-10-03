@@ -3,15 +3,14 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Player Health Settings")]
-    [SerializeField] private int maxHealth = 100; // Vida máxima do jogador
+    [SerializeField] private int maxHealth = 100; 
     private int currentHealth;
 
     [Header("Damage Effects")]
-    [SerializeField] private GameObject deathEffect; // Efeito visual ao morrer
+    [SerializeField] private GameObject deathEffect; 
 
     private void Start()
     {
-        // Inicializa a vida do jogador com o valor máximo
         currentHealth = maxHealth;
     }
 

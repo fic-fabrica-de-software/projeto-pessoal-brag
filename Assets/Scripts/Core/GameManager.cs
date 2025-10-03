@@ -7,14 +7,15 @@ public class GameManager : MonoBehaviour
     [Header("Game State")]
     public bool isGameOver = false; // Indica se o jogo terminou
 
+
     private void Awake()
     {
-        // Garante que apenas uma instância do GameManager exista
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); // Persiste entre cenas
         }
+        
         else
         {
             Destroy(gameObject);
@@ -26,7 +27,6 @@ public class GameManager : MonoBehaviour
         // Define o estado de game over
         isGameOver = true;
 
-        // Exibe uma mensagem de game over (pode ser expandido para UI)
         Debug.Log("Game Over!");
 
         // Aqui você pode adicionar lógica para reiniciar o jogo ou voltar ao menu principal
@@ -38,4 +38,5 @@ public class GameManager : MonoBehaviour
         isGameOver = false;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
+
 }

@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     private Rigidbody2D rb;
     private Animator animator;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,10 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", movement.magnitude);
         
-        // Define direção (opcional: use um parâmetro "Direction")
         if (moveX != 0 || moveY != 0)
         {
-            // Ex: salva última direção para escolher animação certa
             if (Mathf.Abs(moveX) > Mathf.Abs(moveY))
             {
                 animator.SetFloat("MoveX", moveX);
