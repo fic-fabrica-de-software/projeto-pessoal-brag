@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [Header("Game State")]
-    public bool isGameOver = false; // Indica se o jogo terminou
+    public bool isGameOver = false; 
 
 
     private void Awake()
@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Persiste entre cenas
+            DontDestroyOnLoad(gameObject); 
         }
-        
+
         else
         {
             Destroy(gameObject);
