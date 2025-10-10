@@ -1,0 +1,17 @@
+{
+  "name": "projeto-pessoal-brag-1",
+  "version": "1.0.0",
+  "description": "Este é um jogo 2D do tipo top-down shooter com elementos roguelike. O jogo permite que os jogadores controlem um personagem que deve enfrentar inimigos e sobreviver em um ambiente dinâmico.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "":""
+  }
+}
